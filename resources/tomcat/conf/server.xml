@@ -27,6 +27,7 @@
                    enabled="${access.logging.enabled}"/>
             <Host name='localhost'>
                 <Listener className="com.gopivotal.cloudfoundry.tomcat.lifecycle.ApplicationStartupFailureDetectingLifecycleListener"/>
+                <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false" showServerInfo="false" />
             </Host>
         </Engine>
     </Service>
